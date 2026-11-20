@@ -1,0 +1,18 @@
+{
+  "name": "Charu Tender — ಚಾರು ಎಳನೀರು",
+  "short_name": "Charu Tender",
+  "description": "Order fresh tender coconut, sugarcane juice, amla, fresh juices and fruits from Charu Tender, Vijayanagar.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "background_color": "#FFFDF5",
+  "theme_color": "#087F5B",
+  "icons": [
+    {
+      "src": "/logo.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

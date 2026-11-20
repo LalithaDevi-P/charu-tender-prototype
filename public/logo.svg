@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="512" height="512" role="img" aria-label="Charu Tender">
+  <defs>
+    <clipPath id="ct-clip"><circle cx="32" cy="32" r="27"/></clipPath>
+    <g id="ct-palm">
+      <path d="M0 0 C -1.5 9 -3 17 -2 27" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round"/>
+      <path d="M0 0 C -7 -7 -16 -9 -23 -5 C -15 -4 -7 -1 0 0 Z" fill="currentColor"/>
+      <path d="M0 0 C -5 -10 -12 -16 -20 -17 C -13 -12 -6 -5 0 0 Z" fill="currentColor"/>
+      <path d="M0 0 C -2 -11 0 -19 5 -24 C 3 -16 2 -7 0 0 Z" fill="currentColor"/>
+      <path d="M0 0 C 6 -9 14 -14 22 -14 C 14 -10 6 -4 0 0 Z" fill="currentColor"/>
+      <path d="M0 0 C 8 -5 17 -5 24 0 C 16 -2 7 -1 0 0 Z" fill="currentColor"/>
+      <circle cx="-3.5" cy="4" r="2.4" fill="currentColor"/>
+      <circle cx="3.5" cy="5" r="2.4" fill="currentColor"/>
+    </g>
+  </defs>
+  <rect width="64" height="64" rx="15" fill="#FFFDF5"/>
+  <circle cx="32" cy="32" r="27" fill="#EFF8F3"/>
+  <g clip-path="url(#ct-clip)">
+    <ellipse cx="32" cy="54" rx="26" ry="11" fill="#087F5B"/>
+    <ellipse cx="32" cy="50" rx="20" ry="6" fill="#087F5B" opacity="0.55"/>
+    <use href="#ct-palm" transform="translate(27 19)" color="#087F5B"/>
+    <use href="#ct-palm" transform="translate(41 27) scale(-0.72 0.72)" color="#087F5B"/>
+  </g>
+  <circle cx="32" cy="32" r="27" fill="none" stroke="#087F5B" stroke-width="5"/>
+</svg>

@@ -1,0 +1,230 @@
+/* DO NOT CHANGE */
+@import "tailwindcss";
+@import "tw-animate-css";
+@custom-variant dark (&:is(.dark *));
+
+/* DO NOT CHANGE */
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+/* CHARU TENDER brand tokens */
+@theme {
+  --color-brand: #087f5b;
+  --color-brand-deep: #056044;
+  --color-ink: #16352d;
+  --color-cream: #fffdf5;
+  --color-mist: #eff8f3;
+  --color-fresh: #b7d96a;
+  --color-honey: #f4c95d;
+  --color-line: #dceae3;
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-kannada: "Noto Sans Kannada", "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+/* CHANGE VALUES FOR THEME */
+:root {
+  --radius: 0.75rem;
+  --background: #fffdf5;
+  --foreground: #16352d;
+  --card: #ffffff;
+  --card-foreground: #16352d;
+  --popover: #ffffff;
+  --popover-foreground: #16352d;
+  --primary: #087f5b;
+  --primary-foreground: #ffffff;
+  --secondary: #eff8f3;
+  --secondary-foreground: #056044;
+  --muted: #eff8f3;
+  --muted-foreground: #5a7a6f;
+  --accent: #eff8f3;
+  --accent-foreground: #056044;
+  --destructive: #d64545;
+  --border: #dceae3;
+  --input: #dceae3;
+  --ring: #087f5b;
+  --chart-1: #087f5b;
+  --chart-2: #b7d96a;
+  --chart-3: #f4c95d;
+  --chart-4: #056044;
+  --chart-5: #7fc8a9;
+  --sidebar: #056044;
+  --sidebar-foreground: #eff8f3;
+  --sidebar-primary: #b7d96a;
+  --sidebar-primary-foreground: #053b2b;
+  --sidebar-accent: #077152;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #0a6b4f;
+  --sidebar-ring: #b7d96a;
+}
+
+.dark {
+  --background: #10201c;
+  --foreground: #f3f7f5;
+  --card: #16352d;
+  --card-foreground: #f3f7f5;
+  --popover: #16352d;
+  --popover-foreground: #f3f7f5;
+  --primary: #0e9d74;
+  --primary-foreground: #ffffff;
+  --secondary: #1d443a;
+  --secondary-foreground: #dceae3;
+  --muted: #1d443a;
+  --muted-foreground: #9db8ae;
+  --accent: #1d443a;
+  --accent-foreground: #dceae3;
+  --destructive: #e26767;
+  --border: rgba(255, 255, 255, 0.1);
+  --input: rgba(255, 255, 255, 0.14);
+  --ring: #0e9d74;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+  }
+
+  button:not([disabled]),
+  [role="button"]:not([disabled]) {
+    cursor: pointer;
+  }
+
+  ::selection {
+    background: #b7d96a;
+    color: #16352d;
+  }
+}
+
+@layer utilities {
+  .font-kannada {
+    font-family: var(--font-kannada);
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .thin-scrollbar::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  .thin-scrollbar::-webkit-scrollbar-thumb {
+    background: #dceae3;
+    border-radius: 999px;
+  }
+
+  .thin-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .balance {
+    text-wrap: balance;
+  }
+
+  .grain {
+    background-image: radial-gradient(rgba(8, 127, 91, 0.09) 1px, transparent 1px);
+    background-size: 22px 22px;
+  }
+}
+
+/* Receipt printing — only the receipt is visible on paper */
+@media print {
+  body {
+    background: #fff !important;
+  }
+
+  body * {
+    visibility: hidden !important;
+  }
+
+  .print-area,
+  .print-area * {
+    visibility: visible !important;
+  }
+
+  .print-area {
+    position: fixed !important;
+    left: 0;
+    top: 0;
+    width: 300px;
+    max-height: none !important;
+    overflow: visible !important;
+    box-shadow: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    background: #fff !important;
+    padding: 0 !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
